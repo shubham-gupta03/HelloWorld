@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh "aws cloudformation create-stack --stack-name helloWorldPipeline --template-file samTemplate.json --region 'us-east-1'"
+                bat "aws cloudformation create-stack --stack-name helloWorldPipeline --template-file samTemplate.json --region 'us-east-1'"
             }
         }
     }
